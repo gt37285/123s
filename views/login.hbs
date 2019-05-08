@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    {{>metadatos}}
+
+<body>
+
+    <header class="header"></header>
+
+    <div class="main-container">
+        <main class="main">
+            <article class="img">
+                <section class="_img-container"> 
+                    <p class="tip">Organizate <span>es simple!</span></p>
+                    <p class="tips">La organizacion vence al tiempo!</p>
+                    <img class="_img" src="./img/login/1x/Recurso 9.png" alt="">
+                </section>
+                <section class="_img-container"> 
+                    <p class="tip">Decide <span>hacer más!</span></p>
+                    <p class="tips">Sin disciplina y motivacion no hay victoria</p>
+                    <img class="_img" src="./img/login/1x/Recurso 6.png" alt="">
+                </section>
+                <section class="_img-container"> 
+                    <p class="tip">planifica tus <span> metas!</span></p>
+                    <p class="tips">Lo mas sabio es tener una estrategia!</p>
+                    <img class="_img" src="./img/login/1x/Recurso 7.png" alt="">
+                </section>
+
+                <section class="circle-tag">
+                    <i class="fa fa-circle tag"></i>
+                    <i class="fa fa-circle tag"></i>
+                    <i class="fa fa-circle tag"></i>
+                </section>
+            </article>
+            <article class="login-container">
+                <h1 class="logo">Molino</h1>
+                
+                <section class="login">
+                    <p class="lema">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, esse.</p>
+                    <hr>
+                    <h3 class="title">Log <span>in</span></h3>
+
+                    <form action="" id="form1" method="get" class="data-container" enctype="application/x-www-form-urlencoded">
+                        <label for="data-email">E-mail:</label>
+                        <input id="data-email" class="caja email" type="email" name="email">
+                    
+                        <label for="data-password">Password:</label>
+                        <input id="data-password" class="caja password" type="password" name="password" >
+                    
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                    <p id="msnLogin" class="msn"></p>
+                    <p class="enlace-forgot"><a href="#">Forgot Password?</a></p>
+                
+                    <div class="footer">
+                        <p id="login" class="enlace-signUp-login">Don't have an account? <a href="#">Sign up</a></p>
+                        <p class="back"><a href="/"><i class="fa fa-arrow-circle-left iconBack"> <span>Inicio !</span></i></a></p>
+                    </div>
+                </section>
+                <section  class="signup">
+                        <p class="lema welcome">Bienvenido a la familia</p>
+                        <hr>
+                        <h3 class="title">Sign <span>Up</span></h3>
+                        <form action="" class="data-container">
+
+                            <label for="data-user">Name:</label>
+                            <input id="data-user" class="caja user" type="password" >
+
+                            <label for="data-email">E-mail:</label>
+                            <input id="data-email" class="caja email" type="email" >
+                        
+                            <label for="data-password">Password:</label>
+                            <input id="data-password" class="caja password" type="password" >
+                            
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+
+                        <p id="msnSignUp" class="msn"></p>
+                        <p class="enlace-forgot"><a href="#">Forgot Password?</a></p>
+                    
+                        <div class="footer">
+                            <p id="signup" class="enlace-signUp-login">Do you have an account? <a href="#">Login</a></p>
+                            <p class="back"><a href="/"><i class="fa fa-arrow-circle-left iconBack"> <span>Inicio !</span></i></a></p>
+                        </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import 'fuentes','reset','animacion';
+
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+
+    .logo,.bar,.logoM{
+        padding: .5em .5em .5em 1.5em;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: #eee;
+        transform: scale(1);
+        transition: transform .2s ease-out;
+
+        &:hover{ transform: scale(1.2) }
+    }
+
+    .logo,.logoM{ font-family: $fuente1 }
+}
+
+/** Efecto blur */
+
+.efectoModalOpen{
+    header,footer,main{ @include efectoBlur() }
+    .modal{ 
+        display: block;
+        @include fadeIn()
+    }
+    .nav-container{ z-index: -100;}
+}
+
+.efectoModalClose{
+    header,footer,main{ @include efectoBlurQuit() }
+    .modal{ @include fadeOut() }
+    .nav-container{ z-index: 200}
+}
+
+.efectoScroll{
+    .nav-container{ 
+       @include fadeOut(); 
+    }
+}
+
+
+.efectoScrollNav{
+    .nav-container{ 
+        animation: colorChage .5s ease-in forwards;
+        
+        transform: translateY(-100%);
+        @keyframes colorChage {
+            to{
+                background-color: rgba(10, 10, 10, 0.664);
+                transform: translateY(0)
+            }
+        }  
+    }
+}
+
+
+/** modal  */
+
+.modal{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    position: fixed;
+    z-index: 100;
+}
+
+.modal-content{
+    
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: rgb(175, 128, 84); 
+    border-radius: 5px;
+    font-family: $fuente6;
+    font-size: 13px;
+
+    .logo{
+        font-family: $fuente2;
+        font-size: 2em;
+        color: #fff;
+        padding: 1em;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .menu { padding: 1em  0}
+
+    li {
+        padding: 1em;
+        margin: 0 1.5em;
+        border-radius: 5px;
+        &:hover{ background-color: rgba(0, 0, 0, 0.171) }
+        cursor: pointer;
+    }
+
+    i{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform .2s ease-out;
+
+        &:hover{ transform: scale(1.2) }
+    }
+}

@@ -1,0 +1,28 @@
+@import 'fuentes';
+
+.header{
+    height: 100%;
+    background-image: url('../img/pan-index.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .head-content{
+        width: 60%;
+        text-align: center;
+        color: #eee;
+        
+        
+        .title{
+            font-size: 5vw;
+            padding-bottom: .5em;
+        }
+        .descripcion{ 
+            padding-top: 2em;
+            font-size: 14px;
+        }
+    }  
+}

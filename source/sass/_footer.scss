@@ -1,0 +1,99 @@
+.footer{
+    background-color: #1A1B22;
+    color: #fff;
+
+    .container{
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 'menu' 'logo' 'sucursales';
+        text-align: center;
+
+        .menu{ grid-area: menu }
+        .logo{ grid-area: logo }
+        .sucursales{ grid-area: sucursales }
+    }
+    .logo{
+        font-family: $fuente1;
+        margin: 6em 0;
+    }
+
+    textarea{
+        background-color: rgba(26, 27, 34, 0.267);
+        border: solid 1px rgb(121, 121, 122);
+        width: 200px;
+        resize: none;
+    }
+
+    .sucursales,.menu{
+        font-family: $fuente5;
+        font-size: 13px;
+        color: #fff;
+        padding: 1em;
+        h3{ 
+            text-align: center;
+            padding: 1em;
+        }
+        
+        .lista{
+            font-family: $fuente4;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1em;
+            flex-direction: column;
+
+            li{
+                padding: .5em;
+            }
+        }
+    }
+
+    .redes{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2em;
+
+
+        .iconRedes{
+            color: #fff;
+            font-size: 2em;
+            transition:  color .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                color: #aaa;
+            }
+        }
+    }
+
+    .molino{
+       
+    }
+
+
+    .copyright{
+        line-height: 2;
+        text-align: center;
+        font-size: 13px;
+        font-family: $fuente4;
+        color: #fff;
+        padding: 1em;
+    }
+}
+
+
+@media screen and (min-width: 64em){
+
+    .footer{
+        .container{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 100%;
+            grid-template-areas: 'menu logo sucursales';
+        }
+    }
+}
